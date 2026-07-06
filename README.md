@@ -55,9 +55,6 @@ HBL/
 All captured credentials (Username, Password, OTP) are saved in `data.csv` with timestamps for review during training sessions.
 
 
-
----
-
 **Developed by: Soha Waris**
 
 Made for educational purposes only.
