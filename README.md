@@ -1,7 +1,3 @@
-**Yeh lo complete README ek saath. Bas copy karke paste kar do:**
-
-```markdown
-# HBL Phishing 
 
 ```
     =============================================
